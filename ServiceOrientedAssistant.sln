@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeService", "TimeService\TimeService.csproj", "{0EA97086-044C-4366-A436-46A784948849}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherService", "WeatherService\WeatherService.csproj", "{DD7995B9-B16C-42F2-92AB-4F65F3E9DDDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoService", "TodoService\TodoService.csproj", "{6597B285-8BF5-4BC1-80C6-9BEC95E1D5A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0EA97086-044C-4366-A436-46A784948849}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EA97086-044C-4366-A436-46A784948849}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EA97086-044C-4366-A436-46A784948849}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EA97086-044C-4366-A436-46A784948849}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD7995B9-B16C-42F2-92AB-4F65F3E9DDDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD7995B9-B16C-42F2-92AB-4F65F3E9DDDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD7995B9-B16C-42F2-92AB-4F65F3E9DDDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD7995B9-B16C-42F2-92AB-4F65F3E9DDDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6597B285-8BF5-4BC1-80C6-9BEC95E1D5A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6597B285-8BF5-4BC1-80C6-9BEC95E1D5A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6597B285-8BF5-4BC1-80C6-9BEC95E1D5A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6597B285-8BF5-4BC1-80C6-9BEC95E1D5A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
