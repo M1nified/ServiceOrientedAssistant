@@ -7,7 +7,7 @@ using System.Text;
 
 namespace NWeatherService
 {
-    [ServiceContract]
+    [ServiceContract(SessionMode=SessionMode.Required)]
     public interface IWeatherService
     {
         [OperationContract]

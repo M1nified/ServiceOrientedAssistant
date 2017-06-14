@@ -8,37 +8,31 @@ using System.Text;
 
 namespace NTodoService
 {
-    public class Todo
-    {
-        public int Id { get; set; }
-        public string Text { get; set; }
-        public bool Done { get; set; }
-        public Todo(string t)
-        {
-            Text = t;
-            Done = false;
-        }
-    }
     public class TodoService : ITodoService
     {
+        private string _connection = @"C:\tmp\Todo";
         public void RememberTodo(string todo)
         {
-            using (var db = new LiteDatabase(@"Todo.db"))
+            using (var db = new LiteDatabase(_connection))
             {
                 var t = db.GetCollection<Todo>("todo");
-                t.Insert(new Todo(todo));
+                t.Insert(new Todo() {
+                    Text = todo,
+                    Done = false
+                });
             }
         }
 
        public string GetTodo()
        {
             string res = "";
-            using (var db = new LiteDatabase(@"Todo.db"))
+            using (var db = new LiteDatabase(_connection))
             {
                 var t = db.GetCollection<Todo>("todo");
-                foreach(var todo in t.FindAll())
+                var all = t.FindAll().ToList();
+                foreach(var todo in all)
                 {
-                    res += todo.Text + " [" + (todo.Done ? "niezrobione" : "zrobione") + "]\n";
+                    res += todo.Text + " [" + (todo.Done ? "zrobione" : "niezrobione") + "]\n";
                 }
             }
             return res;
@@ -46,7 +40,7 @@ namespace NTodoService
 
         public void MarkDone(int index)
         {
-            using (var db = new LiteDatabase(@"Todo.db"))
+            using (var db = new LiteDatabase(_connection))
             {
                 var t = db.GetCollection<Todo>("todo");
                 Todo x = t.FindById(index);
